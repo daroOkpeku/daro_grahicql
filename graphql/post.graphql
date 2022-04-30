@@ -1,0 +1,10 @@
+type Query{
+postedfind(id: ID @eq): Post @find
+}
+
+type Post {
+    id:ID
+    title:String!
+    paragraph:String!
+    author: User @hasOne
+}
